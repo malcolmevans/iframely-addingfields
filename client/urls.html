@@ -1,6 +1,29 @@
 <template name="urls">
-    <p>
-        <input type="text" id="url-input" placeholder="paste url and hit enter..." style="width: 100%;" />
+    <div class="form">
+        <form class="embedVideoForm">
+            <p>
+                <input type="text" id="videotitle" name="videotitle" placeholder="Video Title" style="width: 100%;" />
+                <input type="text" id="videodescription" name="videodescription" placeholder="Video Description" style="width: 100%;" />
+                <input type="text" id="embedvideo" name="embedvideo" placeholder="paste url and hit enter..." style="width: 100%;" />
+                <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+            </p>
+        </form>
+     </div>       
+    {{#each newitems}}
+        <hr>
+        <p>{{videotitle}}</p>
+        <p>{{videodescription}}</p>
+        <p>
+            {{>oembed}}
+        </p>
+    {{/each}}
+
+
+
+
+
+    <!--<p>
+        <input type="text" id="url-input" name="url-input" placeholder="paste url and hit enter..." style="width: 100%;" />
     </p>
     {{#each items}}
         <hr>
@@ -10,5 +33,5 @@
         <p>
             {{>oembed}}
         </p>
-    {{/each}}
+    {{/each}}-->
 </template>

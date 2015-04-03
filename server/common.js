@@ -1,5 +1,6 @@
 Urls = new Mongo.Collection("urls");
 
+
 Meteor.startup(function() {
 
     Urls.find().observe({
