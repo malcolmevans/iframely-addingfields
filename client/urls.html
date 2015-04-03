@@ -1,0 +1,14 @@
+<template name="urls">
+    <p>
+        <input type="text" id="url-input" placeholder="paste url and hit enter..." style="width: 100%;" />
+    </p>
+    {{#each items}}
+        <hr>
+        <p>
+            <strong><a href="{{url}}" target="_blank">{{url}}</a></strong>
+        </p>
+        <p>
+            {{>oembed}}
+        </p>
+    {{/each}}
+</template>
